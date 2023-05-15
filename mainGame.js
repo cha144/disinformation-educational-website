@@ -92,14 +92,12 @@ function puzzle2() {
   const continuebutton = document.querySelector('.puzzle1Finish');
   header.classList.add('fadeoutandin-class');
   continuebutton.classList.remove("fadein-class");
+  submitbutton.disabled = true;
   continuebutton.disabled = true;
   continuebutton.style.opacity = 0;
   submitbutton.style.opacity = 0;
   input.style.opacity = 0;
 
-  submitbutton.removeEventListener("click", submitPuzzle1());
-  submitbutton.addEventListener("click", submitPuzzle2());
-  
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
@@ -107,10 +105,21 @@ function puzzle2() {
   input.style.top = '10%';
   setTimeout(() => {
       header.innerHTML = 'Now, lets conduct a <b> reverse image search </b> on the authors profile picture. Go to <i>https://www.google.com/imghp?sbi=1</i>, and drag the image into the search bar. Whats the link of the most popular website result?';
+      submitbutton.removeEventListener("click", submitPuzzle1());
+    
+      submitbutton.addEventListener("click", submitPuzzle2());
+      submitbutton.disabled = false;
+  
       }, 500);
 }
 
 function submitPuzzle2() {
-  
+  const answer = document.querySelector('.puzzle1Input').value;
+  if(answer == "https://www.istockphoto.com/photo/breaking-news-gm1147538000-309584440") {
+    alert("correct");
+  }
+  else {
+    alert("Incorrect. The author's profile is located on the left side of the website!");
+  }
 }
 
