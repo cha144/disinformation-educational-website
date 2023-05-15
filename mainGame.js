@@ -166,7 +166,7 @@ function puzzle3() {
   submitbutton.style.top = '13%';
   input.style.top = '10%';
   input.value = '';
-  input.placeholder = 'Enter time type...';
+  input.placeholder = 'Enter the difference...';
   setTimeout(() => {
       header.innerHTML = '<b>Lets start to wrap up on the author. </b> I heard of some inconsistency between the article date and the authors join date. By how many months are the dates different? If we made a mistake and there is no disparity, just tell us the word: none.';
 
@@ -228,7 +228,7 @@ function puzzle4() {
   input.value = '';
   input.placeholder = 'Enter here...';
   setTimeout(() => {
-      header.innerHTML = 'Sources have told us that there are some inconsistencies with the headline compared to other articles. Lets do some <b> lateral reading </b>, which is where you evaluate the credibility of a source by comparing it to other websites. Whats incorrect?';
+      header.innerHTML = 'Sources have told us that there are some inconsistencies with the <b>headline</b> compared to other articles. Lets do some <b> lateral reading </b>, which is where you evaluate the credibility of a source by comparing it to other websites. Whats incorrect?';
 
       submitbutton.onclick = submitPuzzle4;
       submitbutton.disabled = false;
@@ -240,7 +240,7 @@ function puzzle4() {
 
 function submitPuzzle4() {
   const answer = document.querySelector('.puzzle1Input').value;
-  if(answer == "$110" || "110" || "110 billion" || "$110 billion") {
+  if(answer == "$110" || "110" || "110 billion" || "$110 billion" || "110 bil" || "110 Bil" || "$110 bil" || "$110 Bil" || "money" || "Money") {
     const header = document.querySelector('.puzzle1H');
     const input = document.querySelector('.puzzle1Input');
     const submitbutton = document.querySelector('.puzzle1Button');
@@ -256,7 +256,7 @@ function submitPuzzle4() {
     submitbutton.disabled = true;
     header.classList.add('fadeoutandin-class');
     setTimeout(() => {
-    header.innerHTML = '<b> Perfect! Seems like it! What you just did was <b>laterally read</b>. This is a very efficient tool for recognizing fake-news and disinformation used by many of us. If things such as headlines, info, and more are not consistent, one party must have some sort of false information.';
+    header.innerHTML = 'Perfect! Seems like it! What you just did was <b>laterally read</b>. This is a very efficient tool for recognizing fake-news and disinformation used by many of us. If things such as headlines, info, and more are not consistent, one party must have some sort of false information.';
     header.classList.remove('fadeoutandin-class');
       
     continuebutton.onclick = puzzle5;
@@ -268,3 +268,182 @@ function submitPuzzle4() {
   }
 }
 
+function puzzle5() {
+  const header = document.querySelector('.puzzle1H');
+  const input = document.querySelector('.puzzle1Input');
+  const submitbutton = document.querySelector('.puzzle1Button');
+  const continuebutton = document.querySelector('.puzzle1Finish');
+  header.classList.add('fadeoutandin-class');
+  continuebutton.classList.remove("fadein-class");
+  continuebutton.disabled = true;
+  continuebutton.style.opacity = 0;
+  submitbutton.style.opacity = 0;
+  input.style.opacity = 0;
+
+  submitbutton.classList.add("fadein-class");
+  input.classList.add("fadein-class");
+  
+  submitbutton.style.top = '13%';
+  input.style.top = '10%';
+  input.value = '';
+  input.placeholder = 'Enter money here...';
+  setTimeout(() => {
+      header.innerHTML = 'Now whats the actual amount of money thats supposed to be in the headline? If you cant remember you can always go back to searching again.';
+
+      submitbutton.onclick = submitPuzzle5;
+      submitbutton.disabled = false;
+      header.classList.remove('fadeoutandin-class');
+      input.style.opacity = 0;
+      submitbutton.style.opacity = 0;
+      }, 500);
+}
+
+function submitPuzzle5() {
+  const answer = document.querySelector('.puzzle1Input').value;
+  if(answer == "$44" || "44" || "44 billion" || "$44 billion" || "44 bil" || "44 Bil" || "$44 bil" || "$44 Bil") {
+    const header = document.querySelector('.puzzle1H');
+    const input = document.querySelector('.puzzle1Input');
+    const submitbutton = document.querySelector('.puzzle1Button');
+    const continuebutton = document.querySelector('.puzzle1Finish');
+
+    submitbutton.classList.remove("fadein-class");
+    input.classList.remove("fadein-class");
+    input.style.opacity = 0;
+    submitbutton.style.opacity = 0;
+    
+    continuebutton.classList.add('fadein-class');
+    continuebutton.disabled = false;
+    submitbutton.disabled = true;
+    header.classList.add('fadeoutandin-class');
+    setTimeout(() => {
+    header.innerHTML = 'Nice! Another mistake is abnormal and at this point we could really call this news fake and a source of disinformation. But lets delve deeper into this website before we can really confirm it. Remember <b> lateral reading </b> - its gonna help you a lot in the future.';
+    header.classList.remove('fadeoutandin-class');
+      
+    continuebutton.onclick = puzzle6;
+    }, 500);
+  }
+    
+  else {
+    alert("A little off! Remember to go search in a new tab again if you forgot.");
+  }
+}
+
+function puzzle6() {
+  const header = document.querySelector('.puzzle1H');
+  const input = document.querySelector('.puzzle1Input');
+  const submitbutton = document.querySelector('.puzzle1Button');
+  const continuebutton = document.querySelector('.puzzle1Finish');
+  header.classList.add('fadeoutandin-class');
+  continuebutton.classList.remove("fadein-class");
+  continuebutton.disabled = true;
+  continuebutton.style.opacity = 0;
+  submitbutton.style.opacity = 0;
+  input.style.opacity = 0;
+
+  submitbutton.classList.add("fadein-class");
+  input.classList.add("fadein-class");
+  
+  submitbutton.style.top = '13%';
+  input.style.top = '10%';
+  input.value = '';
+  input.placeholder = 'Enter money here...';
+  setTimeout(() => {
+      header.innerHTML = 'Lets look for more inconsistencies throughout the article. Sources have told me it may have something to do with money. You have already found out the actual amount of money, now get to it! Enter the wrong amount thats located in the article.';
+
+      submitbutton.onclick = submitPuzzle6;
+      submitbutton.disabled = false;
+      header.classList.remove('fadeoutandin-class');
+      input.style.opacity = 0;
+      submitbutton.style.opacity = 0;
+      }, 500);
+}
+
+function submitPuzzle6() {
+  const answer = document.querySelector('.puzzle1Input').value;
+  if(answer == "$44") {
+    const header = document.querySelector('.puzzle1H');
+    const input = document.querySelector('.puzzle1Input');
+    const submitbutton = document.querySelector('.puzzle1Button');
+    const continuebutton = document.querySelector('.puzzle1Finish');
+
+    submitbutton.classList.remove("fadein-class");
+    input.classList.remove("fadein-class");
+    input.style.opacity = 0;
+    submitbutton.style.opacity = 0;
+    
+    continuebutton.classList.add('fadein-class');
+    continuebutton.disabled = false;
+    submitbutton.disabled = true;
+    header.classList.add('fadeoutandin-class');
+    setTimeout(() => {
+    header.innerHTML = 'Who could have guessed, anoter mistake! This website is really just not polished. Looking out for mistakes like these are great and always reliable. Lets look into a few more before we move on from the content of the website.';
+    header.classList.remove('fadeoutandin-class');
+      
+    continuebutton.onclick = puzzle7;
+    }, 500);
+  }
+    
+  else {
+    alert("Heres some help, its located in the first paragraph of the article. Remember that you are supposed to enter the wrong amount of money!");
+  }
+}
+
+function puzzle7() {
+  const header = document.querySelector('.puzzle1H');
+  const input = document.querySelector('.puzzle1Input');
+  const submitbutton = document.querySelector('.puzzle1Button');
+  const continuebutton = document.querySelector('.puzzle1Finish');
+  header.classList.add('fadeoutandin-class');
+  continuebutton.classList.remove("fadein-class");
+  continuebutton.disabled = true;
+  continuebutton.style.opacity = 0;
+  submitbutton.style.opacity = 0;
+  input.style.opacity = 0;
+
+  submitbutton.classList.add("fadein-class");
+  input.classList.add("fadein-class");
+  
+  submitbutton.style.top = '13%';
+  input.style.top = '10%';
+  input.value = '';
+  input.placeholder = 'Enter money here...';
+  setTimeout(() => {
+      header.innerHTML = 'Lets look for more inconsistencies throughout the article. Sources have told me it may have something to do with money. You have already found out the actual amount of money, now get to it! Enter the wrong amount thats located in the article.';
+
+      submitbutton.onclick = submitPuzzle6;
+      submitbutton.disabled = false;
+      header.classList.remove('fadeoutandin-class');
+      input.style.opacity = 0;
+      submitbutton.style.opacity = 0;
+      }, 500);
+}
+
+function submitPuzzle7() {
+  const answer = document.querySelector('.puzzle1Input').value;
+  if(answer == "$44") {
+    const header = document.querySelector('.puzzle1H');
+    const input = document.querySelector('.puzzle1Input');
+    const submitbutton = document.querySelector('.puzzle1Button');
+    const continuebutton = document.querySelector('.puzzle1Finish');
+
+    submitbutton.classList.remove("fadein-class");
+    input.classList.remove("fadein-class");
+    input.style.opacity = 0;
+    submitbutton.style.opacity = 0;
+    
+    continuebutton.classList.add('fadein-class');
+    continuebutton.disabled = false;
+    submitbutton.disabled = true;
+    header.classList.add('fadeoutandin-class');
+    setTimeout(() => {
+    header.innerHTML = 'Who could have guessed, anoter mistake! This website is really just not polished. Looking out for mistakes like these are great and always reliable. Lets look into a few more before we move on from the content of the website.';
+    header.classList.remove('fadeoutandin-class');
+      
+    continuebutton.onclick = puzzle8;
+    }, 500);
+  }
+    
+  else {
+    alert("Heres some help, its located in the first paragraph of the article. Remember that you are supposed to enter the wrong amount of money!");
+  }
+}
