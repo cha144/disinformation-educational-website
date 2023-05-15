@@ -63,6 +63,7 @@ function toggleCall() {
 }
 
 function submitPuzzle1() {
+    console.log("submitted");
     const answer = document.querySelector('.puzzle1Input').value;
     console.log(answer);
     if(answer == "BCTimes@bctimes.com") {
@@ -74,6 +75,7 @@ function submitPuzzle1() {
       submitbutton.style.opacity = 0;
       continuebutton.classList.add('fadein-class');
       continuebutton.disabled = false;
+      submitbutton.disabled = true;
       header.classList.add('fadeoutandin-class');
       setTimeout(() => {
       header.innerHTML = '<b>Nice catch!</b> <br> <br> Notice how this email is not personally the authors, but the whole organizations. Remember that reputable news sites usually have personal email addresses for each author. This gives us a good reason to be suspicious so far.';
@@ -92,7 +94,6 @@ function puzzle2() {
   const continuebutton = document.querySelector('.puzzle1Finish');
   header.classList.add('fadeoutandin-class');
   continuebutton.classList.remove("fadein-class");
-  submitbutton.disabled = true;
   continuebutton.disabled = true;
   continuebutton.style.opacity = 0;
   submitbutton.style.opacity = 0;
@@ -103,23 +104,137 @@ function puzzle2() {
   
   submitbutton.style.top = '13%';
   input.style.top = '10%';
+  input.value = '';
+  input.placeholder = 'Enter web link...';
   setTimeout(() => {
       header.innerHTML = 'Now, lets conduct a <b> reverse image search </b> on the authors profile picture. Go to <i>https://www.google.com/imghp?sbi=1</i>, and drag the image into the search bar. Whats the link of the most popular website result?';
-      submitbutton.removeEventListener("click", submitPuzzle1());
-    
-      submitbutton.addEventListener("click", submitPuzzle2());
+
+      submitbutton.onclick = submitPuzzle2;
       submitbutton.disabled = false;
-  
+      header.classList.remove('fadeoutandin-class');
+      input.style.opacity = 0;
+      submitbutton.style.opacity = 0;
       }, 500);
 }
 
 function submitPuzzle2() {
+  console.log("puzzle 2");
   const answer = document.querySelector('.puzzle1Input').value;
   if(answer == "https://www.istockphoto.com/photo/breaking-news-gm1147538000-309584440") {
-    alert("correct");
+    const header = document.querySelector('.puzzle1H');
+    const input = document.querySelector('.puzzle1Input');
+    const submitbutton = document.querySelector('.puzzle1Button');
+    const continuebutton = document.querySelector('.puzzle1Finish');
+
+    submitbutton.classList.remove("fadein-class");
+    input.classList.remove("fadein-class");
+    input.style.opacity = 0;
+    submitbutton.style.opacity = 0;
+    
+    continuebutton.classList.add('fadein-class');
+    continuebutton.disabled = false;
+    submitbutton.disabled = true;
+    header.classList.add('fadeoutandin-class');
+    setTimeout(() => {
+    header.innerHTML = '<b>Who could have guessed! Its a stock image.</b> <br> Stock photos are generic photos, not depicting real people, that are used for various reasons. Remember, reverse image searching can be very useful and has clearly told us that so far, something is very off about this.';
+    header.classList.remove('fadeoutandin-class');
+      
+    continuebutton.onclick = puzzle3;
+    }, 500);
   }
+    
   else {
     alert("Incorrect. The author's profile is located on the left side of the website!");
   }
+}
+
+function puzzle3() {
+  const header = document.querySelector('.puzzle1H');
+  const input = document.querySelector('.puzzle1Input');
+  const submitbutton = document.querySelector('.puzzle1Button');
+  const continuebutton = document.querySelector('.puzzle1Finish');
+  header.classList.add('fadeoutandin-class');
+  continuebutton.classList.remove("fadein-class");
+  continuebutton.disabled = true;
+  continuebutton.style.opacity = 0;
+  submitbutton.style.opacity = 0;
+  input.style.opacity = 0;
+
+  submitbutton.classList.add("fadein-class");
+  input.classList.add("fadein-class");
+  
+  submitbutton.style.top = '13%';
+  input.style.top = '10%';
+  input.value = '';
+  input.placeholder = 'Enter time type...';
+  setTimeout(() => {
+      header.innerHTML = '<b>Lets start to wrap up on the author. </b> I heard of some inconsistency between the article date and the authors join date. By how many months are the dates different? If we made a mistake and there is no disparity, just tell us the word: none.';
+
+      submitbutton.onclick = submitPuzzle3;
+      submitbutton.disabled = false;
+      header.classList.remove('fadeoutandin-class');
+      input.style.opacity = 0;
+      submitbutton.style.opacity = 0;
+      }, 500);
+}
+
+function submitPuzzle3() {
+  const answer = document.querySelector('.puzzle1Input').value;
+  if(answer == "4") {
+    const header = document.querySelector('.puzzle1H');
+    const input = document.querySelector('.puzzle1Input');
+    const submitbutton = document.querySelector('.puzzle1Button');
+    const continuebutton = document.querySelector('.puzzle1Finish');
+
+    submitbutton.classList.remove("fadein-class");
+    input.classList.remove("fadein-class");
+    input.style.opacity = 0;
+    submitbutton.style.opacity = 0;
+    
+    continuebutton.classList.add('fadein-class');
+    continuebutton.disabled = false;
+    submitbutton.disabled = true;
+    header.classList.add('fadeoutandin-class');
+    setTimeout(() => {
+    header.innerHTML = '<b>The author wrote the article before joining?</b> <br> That is fairly funny. Such a simple mistake but it tells us a lot. Remember to look closely for any mistakes as it can really tell a <b> lot </b> about the accuracy of the website. Now lets move on to the article itself for further clues.';
+    header.classList.remove('fadeoutandin-class');
+      
+    continuebutton.onclick = puzzle4;
+    }, 500);
+  }
+    
+  else {
+    alert("Not quite! Heres a helpful tip: read carefully throught the description provided on the author.");
+  }
+}
+
+function puzzle4() {
+  const header = document.querySelector('.puzzle1H');
+  const input = document.querySelector('.puzzle1Input');
+  const submitbutton = document.querySelector('.puzzle1Button');
+  const continuebutton = document.querySelector('.puzzle1Finish');
+  header.classList.add('fadeoutandin-class');
+  continuebutton.classList.remove("fadein-class");
+  continuebutton.disabled = true;
+  continuebutton.style.opacity = 0;
+  submitbutton.style.opacity = 0;
+  input.style.opacity = 0;
+
+  submitbutton.classList.add("fadein-class");
+  input.classList.add("fadein-class");
+  
+  submitbutton.style.top = '13%';
+  input.style.top = '10%';
+  input.value = '';
+  input.placeholder = 'Enter time type...';
+  setTimeout(() => {
+      header.innerHTML = '<b>Lets start to wrap up on the author. </b> I heard of some inconsistency between the article date and the authors join date. By how many months are the dates different? If we made a mistake and there is no disparity, just tell us the word: none.';
+
+      submitbutton.onclick = submitPuzzle3;
+      submitbutton.disabled = false;
+      header.classList.remove('fadeoutandin-class');
+      input.style.opacity = 0;
+      submitbutton.style.opacity = 0;
+      }, 500);
 }
 
