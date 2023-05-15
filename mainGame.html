@@ -12,7 +12,25 @@
 </head>
 
 <body>
-  <header>
+  <div id="callPopup" style="border-radius: 25px;">
+    <a href="#" onclick="toggleCall()">Accept Call</a>
+  </div>
+  
+  <div class="welcomePopup">
+    <h2><b>Hello?</b></h2>
+    <img src="Telephone.jpg">
+    <p><b>Dear Rookie:</b> <br> <br> As you may know, we are living in a seriously dangerous world full of fake news. As our latest recuit, you, your job is to tackle this article that we deemed suspicious, and give us the details needed to give our overall consensus on it. <br> <br> <b>So here's your task:</b> <br> <br> Investigate this article as we tell you and let us know about the details you come across and find. This might include different author names, pictures, emails, and more. We'll let you know what we actually need. We'll continue to stay on call until the job is done.</br> <br> Disclaimer: <b>DO NOT RELOAD OR YOU WILL LOSE PROGRESS.</b></p>
+    <button type="button" onclick="closePopup()"><b>Begin!</b></button>
+  </div>
+
+  <div class="puzzlePopup1">
+    <p class="puzzle1H"><b>Hey again,</b> <br> <br> Let's start with the authors. We were most suspicious on that and I'd like you to investigate them. First, find his contact email. </p>
+    <input class="puzzle1Input" type="text" id="myInput" name="name" placeholder="Enter email address...">
+    <button class="puzzle1Button" onclick="submitPuzzle1()"><b>Submit</b></button>
+    <button disabled class="puzzle1Finish" onclick="puzzle2()"><b>Continue</b>
+  </div>
+
+  <header class="header">
     <div class="news-link">
       <p>www.TheBCTimes.com</p>
     </div>
