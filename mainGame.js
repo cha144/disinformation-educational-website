@@ -179,6 +179,7 @@ function puzzle3() {
 }
 
 function submitPuzzle3() {
+  console.log("puzzle 3");
   const answer = document.querySelector('.puzzle1Input').value;
   if(answer == "4") {
     const header = document.querySelector('.puzzle1H');
@@ -239,8 +240,9 @@ function puzzle4() {
 }
 
 function submitPuzzle4() {
+  console.log("puzzle 4");
   const answer = document.querySelector('.puzzle1Input').value;
-  if(answer == "$110" || "110" || "110 billion" || "$110 billion" || "110 bil" || "110 Bil" || "$110 bil" || "$110 Bil" || "money" || "Money") {
+  if(answer == "110") {
     const header = document.querySelector('.puzzle1H');
     const input = document.querySelector('.puzzle1Input');
     const submitbutton = document.querySelector('.puzzle1Button');
@@ -264,7 +266,7 @@ function submitPuzzle4() {
   }
     
   else {
-    alert("Thats not quite it! Heres a hint: it relates to a number.");
+    alert("Thats not quite it! Heres a hint: it relates to a number. Enter in billions and without the $ sign.");
   }
 }
 
@@ -299,8 +301,9 @@ function puzzle5() {
 }
 
 function submitPuzzle5() {
+  console.log("puzzle 5");
   const answer = document.querySelector('.puzzle1Input').value;
-  if(answer == "$44" || "44" || "44 billion" || "$44 billion" || "44 bil" || "44 Bil" || "$44 bil" || "$44 Bil") {
+  if(answer == "44") {
     const header = document.querySelector('.puzzle1H');
     const input = document.querySelector('.puzzle1Input');
     const submitbutton = document.querySelector('.puzzle1Button');
@@ -324,7 +327,7 @@ function submitPuzzle5() {
   }
     
   else {
-    alert("A little off! Remember to go search in a new tab again if you forgot.");
+    alert("A little off! Remember to go search in a new tab again if you forgot. Enter in billions and without the $ sign.");
   }
 }
 
@@ -359,8 +362,9 @@ function puzzle6() {
 }
 
 function submitPuzzle6() {
+  console.log("puzzle 6");
   const answer = document.querySelector('.puzzle1Input').value;
-  if(answer == "$44") {
+  if(answer == "120") {
     const header = document.querySelector('.puzzle1H');
     const input = document.querySelector('.puzzle1Input');
     const submitbutton = document.querySelector('.puzzle1Button');
@@ -376,7 +380,7 @@ function submitPuzzle6() {
     submitbutton.disabled = true;
     header.classList.add('fadeoutandin-class');
     setTimeout(() => {
-    header.innerHTML = 'Who could have guessed, anoter mistake! This website is really just not polished. Looking out for mistakes like these are great and always reliable. Lets look into a few more before we move on from the content of the website.';
+    header.innerHTML = 'Who could have guessed, another mistake! This website is really just not polished. Looking out for mistakes like these are great and always reliable. Lets look into a few more before we move on from the content of the website.';
     header.classList.remove('fadeoutandin-class');
       
     continuebutton.onclick = puzzle7;
@@ -384,7 +388,7 @@ function submitPuzzle6() {
   }
     
   else {
-    alert("Heres some help, its located in the first paragraph of the article. Remember that you are supposed to enter the wrong amount of money!");
+    alert("Heres some help, its located in the first paragraph of the article. Remember that you are supposed to enter the wrong amount of money! Enter in billions and without the $ sign.");
   }
 }
 
@@ -406,11 +410,11 @@ function puzzle7() {
   submitbutton.style.top = '13%';
   input.style.top = '10%';
   input.value = '';
-  input.placeholder = 'Enter money here...';
+  input.placeholder = 'Enter # here...';
   setTimeout(() => {
-      header.innerHTML = 'Lets look for more inconsistencies throughout the article. Sources have told me it may have something to do with money. You have already found out the actual amount of money, now get to it! Enter the wrong amount thats located in the article.';
+      header.innerHTML = 'Just a couple more to go! This time we got news about a <b> whole paragraph (or two!) </b> being inconsistent with the vast majority of other articles. You know what to do, find what number paragraph matches this description! If theres two, seperate the numbers with: and.';
 
-      submitbutton.onclick = submitPuzzle6;
+      submitbutton.onclick = submitPuzzle7;
       submitbutton.disabled = false;
       header.classList.remove('fadeoutandin-class');
       input.style.opacity = 0;
@@ -419,8 +423,9 @@ function puzzle7() {
 }
 
 function submitPuzzle7() {
+  console.log("puzzle 7");
   const answer = document.querySelector('.puzzle1Input').value;
-  if(answer == "$44") {
+  if(answer == "2 and 3") {
     const header = document.querySelector('.puzzle1H');
     const input = document.querySelector('.puzzle1Input');
     const submitbutton = document.querySelector('.puzzle1Button');
@@ -436,7 +441,7 @@ function submitPuzzle7() {
     submitbutton.disabled = true;
     header.classList.add('fadeoutandin-class');
     setTimeout(() => {
-    header.innerHTML = 'Who could have guessed, anoter mistake! This website is really just not polished. Looking out for mistakes like these are great and always reliable. Lets look into a few more before we move on from the content of the website.';
+    header.innerHTML = 'This seemed really fake anyway. When looking into the last paragraph, you may have noticed that <b>fact-checking websites pop up.</b> This will be the case for viral news. If you arent sure whether a viral post is real or not, its a good idea to check these websites.';
     header.classList.remove('fadeoutandin-class');
       
     continuebutton.onclick = puzzle8;
@@ -444,6 +449,147 @@ function submitPuzzle7() {
   }
     
   else {
-    alert("Heres some help, its located in the first paragraph of the article. Remember that you are supposed to enter the wrong amount of money!");
+    alert("Not quite it. Remember there may be more than one inconsistent paragraph! If there is, seperate your answer with the word and. For example 5 and 7, 9 and 13, etc.");
   }
+}
+
+function puzzle8() {
+  const header = document.querySelector('.puzzle1H');
+  const input = document.querySelector('.puzzle1Input');
+  const submitbutton = document.querySelector('.puzzle1Button');
+  const continuebutton = document.querySelector('.puzzle1Finish');
+  header.classList.add('fadeoutandin-class');
+  continuebutton.classList.remove("fadein-class");
+  continuebutton.disabled = true;
+  continuebutton.style.opacity = 0;
+  submitbutton.style.opacity = 0;
+  input.style.opacity = 0;
+
+  submitbutton.classList.add("fadein-class");
+  input.classList.add("fadein-class");
+  
+  submitbutton.style.top = '13%';
+  input.style.top = '10%';
+  input.value = '';
+  input.placeholder = 'Enter here...';
+  setTimeout(() => {
+      header.innerHTML = 'Lets do some <b> reverse searching </b> again, except with social media like this one. Try searching up what the tweet says along with the words <i> Elon Musk tweet </i> on Google. If nothing comes up or any directly articles, its likely fake and made up. Enter fake or real.';
+
+      submitbutton.onclick = submitPuzzle8;
+      submitbutton.disabled = false;
+      header.classList.remove('fadeoutandin-class');
+      input.style.opacity = 0;
+      submitbutton.style.opacity = 0;
+      }, 500);
+}
+
+function submitPuzzle8() {
+  console.log("puzzle 8");
+  const answer = document.querySelector('.puzzle1Input').value;
+  if(answer == "fake") {
+    const header = document.querySelector('.puzzle1H');
+    const input = document.querySelector('.puzzle1Input');
+    const submitbutton = document.querySelector('.puzzle1Button');
+    const continuebutton = document.querySelector('.puzzle1Finish');
+
+    submitbutton.classList.remove("fadein-class");
+    input.classList.remove("fadein-class");
+    input.style.opacity = 0;
+    submitbutton.style.opacity = 0;
+    
+    continuebutton.classList.add('fadein-class');
+    continuebutton.disabled = false;
+    submitbutton.disabled = true;
+    header.classList.add('fadeoutandin-class');
+    setTimeout(() => {
+    header.innerHTML = 'Youve done it again! This is another form of <b> reverse searching </b> that can help you a lot in investigating disinformation. With how prevalent social media is nowadays, you can find nearly anything anybody says on the internet.';
+    header.classList.remove('fadeoutandin-class');
+      
+    continuebutton.onclick = puzzle9;
+    }, 500);
+  }
+    
+  else {
+    alert("Have you found any tweets? If not, its probably fake. Also there should not be any capitals in the word real or fake!");
+  }
+}
+
+function puzzle9() {
+  const header = document.querySelector('.puzzle1H');
+  const input = document.querySelector('.puzzle1Input');
+  const submitbutton = document.querySelector('.puzzle1Button');
+  const continuebutton = document.querySelector('.puzzle1Finish');
+  header.classList.add('fadeoutandin-class');
+  continuebutton.classList.remove("fadein-class");
+  continuebutton.disabled = true;
+  continuebutton.style.opacity = 0;
+  submitbutton.style.opacity = 0;
+  input.style.opacity = 0;
+
+  submitbutton.classList.add("fadein-class");
+  input.classList.add("fadein-class");
+  
+  submitbutton.style.top = '13%';
+  input.style.top = '10%';
+  input.value = '';
+  input.placeholder = 'Enter here...';
+  setTimeout(() => {
+      header.innerHTML = 'Now thats all from me! Lets wrap up. You can continue to investigate this website and find more fake information located in this article. Otherwise, its time for you to give your final conclusion on whether or not this article is fake or not. When you are ready, enter ready with no capitals.';
+
+      submitbutton.onclick = submitPuzzle9;
+      submitbutton.disabled = false;
+      header.classList.remove('fadeoutandin-class');
+      input.style.opacity = 0;
+      submitbutton.style.opacity = 0;
+      }, 500);
+}
+
+function submitPuzzle9() {
+  console.log("puzzle 9");
+  const answer = document.querySelector('.puzzle1Input').value;
+  if(answer == "ready") {
+    const header = document.querySelector('.puzzle1H');
+    const input = document.querySelector('.puzzle1Input');
+    const submitbutton = document.querySelector('.puzzle1Button');
+    const continuebutton = document.querySelector('.puzzle1Finish');
+
+    submitbutton.classList.remove("fadein-class");
+    input.classList.remove("fadein-class");
+    input.style.opacity = 0;
+    submitbutton.style.opacity = 0;
+
+    continuebutton.innerHTML = 'Finish';
+    continuebutton.classList.add('fadein-class');
+    continuebutton.disabled = false;
+    submitbutton.disabled = true;
+    header.classList.add('fadeoutandin-class');
+    setTimeout(() => {
+    header.innerHTML = 'On the next page you will be presented with two options - <b> True </b> or <b> False </b>. Choose the one you best believe. Additionally, you will be given a summary on what youve learned here. Its been great working with you rookie and I proudly welcome you to the team!';
+    header.classList.remove('fadeoutandin-class');
+      
+    continuebutton.onclick = finish;
+    }, 500);
+  }
+    
+  else {
+    alert("The word is ready with all lowercase letters.");
+  }
+}
+
+function finish() {
+  setTimeout(() => {
+  var body = document.querySelector("body");
+  body.classList.add("blur");
+  }, 1000);
+
+  setTimeout(() => {
+    var trueButton = document.querySelector(".wrap");
+    var falseButton = document.querySelector(".wrap1");
+    
+    trueButton.classList.add('fadein-class');
+    falseButton.classList.add('fadein-class');
+
+    trueButton.disabled = false;
+    falseButton.disabled = false;
+  }, 2500);
 }
