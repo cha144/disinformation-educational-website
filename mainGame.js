@@ -351,7 +351,7 @@ function puzzle6() {
   input.value = '';
   input.placeholder = 'Enter money here...';
   setTimeout(() => {
-      header.innerHTML = 'Lets look for more inconsistencies throughout the article. Sources have told me it may have something to do with money. You have already found out the actual amount of money, now get to it! Enter the wrong amount thats located in the article.';
+      header.innerHTML = 'Lets look for more inconsistencies throughout the article. Sources have told me it may have something to do with money. You have already found out the actual amount of money, now get to it! Enter the other wrong amount thats located in the article.';
 
       submitbutton.onclick = submitPuzzle6;
       submitbutton.disabled = false;
@@ -441,7 +441,7 @@ function submitPuzzle7() {
     submitbutton.disabled = true;
     header.classList.add('fadeoutandin-class');
     setTimeout(() => {
-    header.innerHTML = 'This seemed really fake anyway. When looking into the last paragraph, you may have noticed that <b>fact-checking websites pop up.</b> This will be the case for viral news. If you arent sure whether a viral post is real or not, its a good idea to check these websites.';
+    header.innerHTML = 'This seemed really fake anyway. When looking into the last paragraph, you may have noticed that <b>fact-checking websites</b> pop up. This will be the case for viral news. If you arent sure whether a viral post is real or not, its a good idea to check these websites.';
     header.classList.remove('fadeoutandin-class');
       
     continuebutton.onclick = puzzle8;
@@ -473,7 +473,7 @@ function puzzle8() {
   input.value = '';
   input.placeholder = 'Enter here...';
   setTimeout(() => {
-      header.innerHTML = 'Lets do some <b> reverse searching </b> again, except with social media like this one. Try searching up what the tweet says along with the words <i> Elon Musk tweet </i> on Google. If nothing comes up or any directly articles, its likely fake and made up. Enter fake or real.';
+      header.innerHTML = 'Lets do some <b> reverse searching </b> again, except with social media like this one. Try searching up what the tweet says along with the words <i> Elon Musk tweet </i> on Google. If nothing comes up or any directly articles, its likely fake and made up. Enter whether its fake or real.';
 
       submitbutton.onclick = submitPuzzle8;
       submitbutton.disabled = false;
@@ -534,7 +534,7 @@ function puzzle9() {
   input.value = '';
   input.placeholder = 'Enter here...';
   setTimeout(() => {
-      header.innerHTML = 'Now thats all from me! Lets wrap up. You can continue to investigate this website and find more fake information located in this article. Otherwise, its time for you to give your final conclusion on whether or not this article is fake or not. When you are ready, enter ready with no capitals.';
+      header.innerHTML = '<b>Now thats all from me!</b> Lets wrap up. You can continue to investigate this website and find more fake information located in this article. Otherwise, its time for you to give your final conclusion on whether or not this article is fake or not. When you are ready, enter <b>ready</b> with no capitals.';
 
       submitbutton.onclick = submitPuzzle9;
       submitbutton.disabled = false;
@@ -583,11 +583,15 @@ function finish() {
   }, 1000);
 
   setTimeout(() => {
-    var trueButton = document.querySelector(".wrap");
-    var falseButton = document.querySelector(".wrap1");
+    var trueButtonContainer = document.querySelector(".wrap");
+    var falseButtonContainer = document.querySelector(".wrap1");
+
+    var trueButton = document.querySelector('.trueButton');
+    var falseButton = document.querySelector('.falseButton');
     
-    trueButton.classList.add('fadein-class');
-    falseButton.classList.add('fadein-class');
+    
+    trueButtonContainer.classList.add('fadein-class');
+    falseButtonContainer.classList.add('fadein-class');
 
     trueButton.disabled = false;
     falseButton.disabled = false;
