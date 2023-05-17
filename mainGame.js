@@ -102,8 +102,8 @@ function puzzle2() {
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
-  submitbutton.style.top = '13%';
-  input.style.top = '10%';
+  submitbutton.style.top = '23%';
+  input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter web link...';
   setTimeout(() => {
@@ -163,8 +163,8 @@ function puzzle3() {
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
-  submitbutton.style.top = '13%';
-  input.style.top = '10%';
+  submitbutton.style.top = '23%';
+  input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter the difference...';
   setTimeout(() => {
@@ -224,12 +224,12 @@ function puzzle4() {
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
-  submitbutton.style.top = '13%';
-  input.style.top = '10%';
+  submitbutton.style.top = '23%';
+  input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter here...';
   setTimeout(() => {
-      header.innerHTML = 'Sources have told us that there are some inconsistencies with the <b>headline</b> compared to other articles. Lets do some <b> lateral reading </b>, which is where you evaluate the credibility of a source by comparing it to other websites. Whats incorrect?';
+      header.innerHTML = 'Sources have told us that there are something is wrong with the <b>headline</b> compared to other articles. Lets do some <b> lateral reading </b>, which is where you evaluate the credibility of a source by comparing it to other websites. Search up something like the headline of this article. What word or number is incorrect?';
 
       submitbutton.onclick = submitPuzzle4;
       submitbutton.disabled = false;
@@ -285,8 +285,8 @@ function puzzle5() {
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
-  submitbutton.style.top = '13%';
-  input.style.top = '10%';
+  submitbutton.style.top = '23%';
+  input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter money here...';
   setTimeout(() => {
@@ -346,12 +346,12 @@ function puzzle6() {
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
-  submitbutton.style.top = '13%';
-  input.style.top = '10%';
+  submitbutton.style.top = '23%';
+  input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter money here...';
   setTimeout(() => {
-      header.innerHTML = 'Lets look for more inconsistencies throughout the article. Sources have told me it may have something to do with money. You have already found out the actual amount of money, now get to it! Enter the other wrong amount thats located in the article.';
+      header.innerHTML = 'Lets look for more inconsistencies throughout the article. Sources have told me it may have something to do with money. Look through the paragraphs and see if there are any other numbers that arent $44 billion. You have already found out the actual amount of money, now get to it! Enter the other wrong amount thats located in the article.';
 
       submitbutton.onclick = submitPuzzle6;
       submitbutton.disabled = false;
@@ -407,12 +407,12 @@ function puzzle7() {
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
-  submitbutton.style.top = '13%';
-  input.style.top = '10%';
+  submitbutton.style.top = '23%';
+  input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter # here...';
   setTimeout(() => {
-      header.innerHTML = 'Just a couple more to go! This time we got news about a <b> whole paragraph (or two!) </b> being inconsistent with the vast majority of other articles. You know what to do, find what number paragraph matches this description! If theres two, seperate the numbers with: and.';
+      header.innerHTML = 'Just a couple more to go! This time we got news about a <b> whole paragraph (or two!) </b> not matching with the vast majority of other articles. You know what to do, find what number paragraph, 1, 2, or 3, matches this description! If theres two, seperate the numbers with: and.';
 
       submitbutton.onclick = submitPuzzle7;
       submitbutton.disabled = false;
@@ -468,8 +468,8 @@ function puzzle8() {
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
-  submitbutton.style.top = '13%';
-  input.style.top = '10%';
+  submitbutton.style.top = '23%';
+  input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter here...';
   setTimeout(() => {
@@ -529,8 +529,8 @@ function puzzle9() {
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
   
-  submitbutton.style.top = '13%';
-  input.style.top = '10%';
+  submitbutton.style.top = '23%';
+  input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter here...';
   setTimeout(() => {
@@ -595,5 +595,5 @@ function finish() {
 
     trueButton.disabled = false;
     falseButton.disabled = false;
-  }, 2500);
+  }, 1500);
 }
