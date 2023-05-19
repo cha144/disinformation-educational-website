@@ -92,6 +92,7 @@ function puzzle2() {
   const input = document.querySelector('.puzzle1Input');
   const submitbutton = document.querySelector('.puzzle1Button');
   const continuebutton = document.querySelector('.puzzle1Finish');
+  const video = document.querySelector('.video');
   header.classList.add('fadeoutandin-class');
   continuebutton.classList.remove("fadein-class");
   continuebutton.disabled = true;
@@ -101,13 +102,14 @@ function puzzle2() {
 
   submitbutton.classList.add("fadein-class");
   input.classList.add("fadein-class");
+  video.classList.add("fadein-class");
   
   submitbutton.style.top = '23%';
   input.style.top = '20%';
   input.value = '';
   input.placeholder = 'Enter web link...';
   setTimeout(() => {
-      header.innerHTML = 'Now, lets conduct a <b> reverse image search </b> on the authors profile picture. Go to <i>https://www.google.com/imghp?sbi=1</i>, and drag the image into the search bar. Whats the link of the most popular website result?';
+      header.innerHTML = 'Now, lets conduct a <b> reverse image search </b> on the authors profile picture. Go to <i>https://images.google.ca</i>, and drag the image into the search bar. Whats the link of the most popular website result? For more help view video on the left!';
 
       submitbutton.onclick = submitPuzzle2;
       submitbutton.disabled = false;
@@ -125,6 +127,10 @@ function submitPuzzle2() {
     const input = document.querySelector('.puzzle1Input');
     const submitbutton = document.querySelector('.puzzle1Button');
     const continuebutton = document.querySelector('.puzzle1Finish');
+    const video = document.querySelector('.video');
+
+    video.classList.remove("fadein-class");
+    video.style.opacity = 0;
 
     submitbutton.classList.remove("fadein-class");
     input.classList.remove("fadein-class");
@@ -181,7 +187,7 @@ function puzzle3() {
 function submitPuzzle3() {
   console.log("puzzle 3");
   const answer = document.querySelector('.puzzle1Input').value;
-  if(answer == "4") {
+  if((answer == "4") || (answer == "5") || (answer == "6")) {
     const header = document.querySelector('.puzzle1H');
     const input = document.querySelector('.puzzle1Input');
     const submitbutton = document.querySelector('.puzzle1Button');
@@ -412,7 +418,7 @@ function puzzle7() {
   input.value = '';
   input.placeholder = 'Enter # here...';
   setTimeout(() => {
-      header.innerHTML = 'Just a couple more to go! This time we got news about a <b> whole paragraph (or two!) </b> not matching with the vast majority of other articles. You know what to do, find what number paragraph, 1, 2, or 3, matches this description! If theres two, seperate the numbers with: and.';
+      header.innerHTML = 'Just a couple more to go! This time we got news about a <b> whole paragraph (or two!) </b> not matching with the vast majority of other articles. You know what to do, find what number paragraph(s), 1, 2, or 3, matches this description! If theres two, seperate the numbers in your answer with: <mark>and</mark>.';
 
       submitbutton.onclick = submitPuzzle7;
       submitbutton.disabled = false;
@@ -425,7 +431,7 @@ function puzzle7() {
 function submitPuzzle7() {
   console.log("puzzle 7");
   const answer = document.querySelector('.puzzle1Input').value;
-  if(answer == "2 and 3") {
+  if((answer == "2 and 3") || (answer == "2, 3")) {
     const header = document.querySelector('.puzzle1H');
     const input = document.querySelector('.puzzle1Input');
     const submitbutton = document.querySelector('.puzzle1Button');

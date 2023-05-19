@@ -582,3 +582,12 @@ content: '';
     opacity: 0;
   }
 }
+
+.video {
+  border: 2px solid black;
+  position: fixed;
+  left: 60%;
+  top: 28%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
+}
