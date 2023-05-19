@@ -109,7 +109,7 @@ function puzzle2() {
   input.value = '';
   input.placeholder = 'Enter web link...';
   setTimeout(() => {
-      header.innerHTML = 'Now, lets conduct a <b> reverse image search </b> on the authors profile picture. Go to <i>https://images.google.ca</i>, and drag the image into the search bar. Whats the link of the most popular website result? For more help view video on the left!';
+      header.innerHTML = 'Now, lets conduct a <b> reverse image search </b> on the authors profile picture. Go to <i>https://images.google.ca</i>, and drag the image into the search bar. Whats the link of the most popular website result? For more help view video on the left! <b>(Reload if video fails to load)</b>';
 
       submitbutton.onclick = submitPuzzle2;
       submitbutton.disabled = false;

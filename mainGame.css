@@ -590,4 +590,5 @@ content: '';
   top: 28%;
   transform: translate(-50%,-50%);
   z-index: 5;
+  opacity: 0;
 }
